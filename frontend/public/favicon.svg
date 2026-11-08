@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#F28C28" stroke="#D96516" stroke-width="4"/>
+  <circle cx="32" cy="32" r="24" fill="#FFE9D6"/>
+  <circle cx="32" cy="32" r="20" fill="#F28C28"/>
+  <!-- Orange pulp segments -->
+  <path d="M32 32 L32 14 A18 18 0 0 1 45 20 Z" fill="#FFA347"/>
+  <path d="M32 32 L45 20 A18 18 0 0 1 50 32 Z" fill="#FFA347"/>
+  <path d="M32 32 L50 32 A18 18 0 0 1 45 44 Z" fill="#FFA347"/>
+  <path d="M32 32 L45 44 A18 18 0 0 1 32 50 Z" fill="#FFA347"/>
+  <path d="M32 32 L32 50 A18 18 0 0 1 19 44 Z" fill="#FFA347"/>
+  <path d="M32 32 L19 44 A18 18 0 0 1 14 32 Z" fill="#FFA347"/>
+  <path d="M32 32 L14 32 A18 18 0 0 1 19 20 Z" fill="#FFA347"/>
+  <path d="M32 32 L19 20 A18 18 0 0 1 32 14 Z" fill="#FFA347"/>
+  <circle cx="32" cy="32" r="4" fill="#FFF9F0"/>
+  <!-- Leaf -->
+  <path d="M32 6 C38 2 46 4 48 10 C42 12 34 10 32 6 Z" fill="#48BB78"/>
+</svg>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orange Pulp Juice Point – Official Counter QR Poster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #F6F1EA;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      color: #242424;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px 48px;
+    }
+
+    /* Top Controls Bar */
+    .controls-panel {
+      max-width: 620px;
+      width: 100%;
+      background: white;
+      border-radius: 20px;
+      padding: 16px 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid rgba(242, 140, 40, 0.2);
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .controls-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: #D96516;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .badge-live {
+      background: #EBF7EE;
+      color: #2E7D32;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      border: 1px solid #A5D6A7;
+    }
+    .actions-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #F28C28, #D96516);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-weight: 800;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(217, 101, 22, 0.3);
+      transition: transform 0.15s;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+    }
+    .btn-outline {
+      background: white;
+      color: #D96516;
+      border: 1.5px solid #D96516;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-outline:hover {
+      background: #FFF9F0;
+    }
+    .toggle-group {
+      display: flex;
+      background: #F1ECE1;
+      padding: 3px;
+      border-radius: 9999px;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .toggle-btn {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: none;
+      background: transparent;
+      color: #666;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .toggle-btn.active {
+      background: white;
+      color: #D96516;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Poster Container */
+    .poster-container {
+      max-width: 520px;
+      width: 100%;
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 45px rgba(217, 101, 22, 0.2), 0 0 0 1px rgba(242, 140, 40, 0.2);
+      border: 6px solid white;
+    }
+    .poster-img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+        margin: 0;
+      }
+      .controls-panel {
+        display: none !important;
+      }
+      .poster-container {
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        page-break-inside: avoid;
+      }
+      .poster-img {
+        max-height: 100vh;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Controls Header -->
+  <div class="controls-panel">
+    <div class="controls-title">
+      <span>🍊 Orange Pulp Juice Point Counter Poster</span>
+      <span class="badge-live">✓ Live Scannable QR</span>
+    </div>
+    
+    <div class="actions-row">
+      <button class="btn-primary" onclick="window.print()">
+        🖨️ Print Counter Poster
+      </button>
+
+      <a id="download-link" href="/poster-final.png" download="Orange Pulp Scratch & Win Poster.png" class="btn-outline">
+        ⬇️ Download Poster PNG
+      </a>
+
+      <a href="/" class="btn-outline" style="margin-left: auto;">
+        ← Back to Game
+      </a>
+    </div>
+
+    <div style="display: flex; align-items: center; justify-content: space-between; pt-2; border-top: 1px solid #F1ECE1; padding-top: 10px;">
+      <span style="font-size: 12px; color: #777; font-weight: 600;">Choose QR Style:</span>
+      <div class="toggle-group">
+        <button id="btn-branded" class="toggle-btn active" onclick="setPoster('/poster-final.png', true)">
+          🍊 Citrus Badge QR
+        </button>
+        <button id="btn-clean" class="toggle-btn" onclick="setPoster('/poster-clean.png', false)">
+          ⬛ Classic High-Contrast QR
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Resolution Official Poster with QR Embedded -->
+  <div class="poster-container">
+    <img id="poster-display" src="/poster-final.png" alt="Orange Pulp Scratch & Win Poster" class="poster-img">
+  </div>
+
+  <script>
+    function setPoster(src, isBranded) {
+      document.getElementById('poster-display').src = src;
+      document.getElementById('download-link').href = src;
+      document.getElementById('download-link').download = isBranded 
+        ? 'Orange Pulp Scratch & Win Poster - With QR.png' 
+        : 'Orange Pulp Scratch & Win Poster - Clean QR.png';
+      
+      document.getElementById('btn-branded').classList.toggle('active', isBranded);
+      document.getElementById('btn-clean').classList.toggle('active', !isBranded);
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production & Build outputs
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+build/
+**/build/
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# Environment variables & secrets
+.env
+**/.env
+.env.local
+.env.*.local
+!.env.example
+!**/.env.example
+
+# Vercel deployment cache
+.vercel/
+**/.vercel/
+
+# Logs & scratch
+*.log
+logs/
+scratch/
+temp_*.png
+qr_dark.png
+qr_brand.png
+backend/temp_qr.png
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
